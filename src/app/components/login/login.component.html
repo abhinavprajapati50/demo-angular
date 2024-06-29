@@ -1,0 +1,23 @@
+<div class="login-container">
+    <form 
+    class="container"
+    [formGroup]="loginForm"
+
+    >
+      <div>
+        <label for="email">email</label>
+        <input type="text" id="email" name="email"  [formControl]="email" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"  [formControl]="password" required>
+        
+      </div>
+      <button type="submit"  [disabled]="loginForm.invalid" (click)="login()">Login</button>
+      <button type="reset" (click)="reset()">Reset</button>
+    </form>
+
+    <div> Email valid{{email.valid}} {{email.errors}}</div>
+
+  </div>
+  

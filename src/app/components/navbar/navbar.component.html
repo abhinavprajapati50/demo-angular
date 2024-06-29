@@ -1,0 +1,34 @@
+<div>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a routerLinkActive="active" routerLink="/">Code Artem</a>
+    </div>
+    <ul class="navbar-nav">
+      @if( !isAuthenticated()){
+
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/login" class="nav-link"
+          >Login</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/signup" class="nav-link"
+          >Signup</a
+        >
+      </li>
+      }@else{
+
+      <li class="nav-item signout-btn" (click)="logoutUser()">
+        <a r class="nav-link">SignOut</a>
+      </li>
+      }
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/about" class="nav-link"
+          >About</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <hr />
+</div>

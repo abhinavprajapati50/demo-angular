@@ -1,0 +1,94 @@
+<!-- <p>user-profile works!</p> -->
+<!-- <p>{{ name }}</p> -->
+<!-- <button [disabled]="isDisabled">dsds</button> -->
+
+<!-- <!-- Two way data binding    --> -->
+<!-- <h4>input Type : {{ twoWayDataBind }}</h4> -->
+<!-- <input type="text" [value]="twoWayDataBind" (input)="onChange($event)" /> -->
+
+<!-- <!-- One way --> -->
+<!-- <h4>input Type : {{ oneWayDataBind }}</h4> -->
+<!-- <input type="text" [(ngModel)]="oneWayDataBind" /> -->
+
+<!-- <!-- array render --> -->
+<!-- <!-- 1)For --> -->
+<!-- <div> -->
+<!--   @for(user of users;track user.id){ @if (user.age >90) { -->
+
+<!--   <h3> -->
+<!--     {{ user.id }} -->
+<!--     {{ user.name }} -->
+<!--     {{ user.age }} -->
+<!--   </h3> -->
+<!--   } @else { -->
+<!--     <h3> -->
+<!--         {{ user.id }} -->
+<!--         {{ user.name }} -->
+<!--         {{ user.age }} -->
+<!--       </h3> -->
+<!--   } -->
+
+<!--  } -->
+<!-- </div> -->
+
+<!-- <hr /> -->
+<!-- <!-- Directives ngFor --> -->
+<!-- <!-- 2) ngFor --> -->
+<!-- <div *ngFor="let user of users"> -->
+<!--   <!-- @for(user of users;track user.id){ @if (user.age >90) { --> -->
+
+<!--   <h3> -->
+<!--     {{ user.id }} -->
+<!--     {{ user.name }} -->
+<!--     {{ user.age }} -->
+<!--   </h3> -->
+<!--    } } --> 
+<!-- </div> -->
+
+<!-- <hr /> -->
+<!--  Condition NgIf --> 
+
+<!-- <div *ngFor="let user of users"> -->
+<!--   <!-- @for(user of users;track user.id){ @if (user.age >90) { --> -->
+<!-- <!-- if condition --> -->
+<!--   <h3 *ngIf="user.age > 90; else elseBlock"> -->
+<!--     {{ user.id }} -->
+<!--     {{ user.name }} -->
+<!--     {{ user.age }} -->
+<!--   </h3> -->
+<!--    else condition --> 
+
+<!--       <ng-template #elseBlock > -->
+          
+<!--           <h3 *ngIf="user.age > 90"> -->
+<!--               {{ user.id }} -->
+<!--               {{ user.name }} -->
+<!--               {{ user.age }} -->
+<!--             </h3> -->
+<!--         </ng-template> -->
+
+<!-- </div> -->
+ 
+
+<!-- Get data from parent to child (fron  app.js) -->
+
+<!-- <div>
+  {{name}}
+</div> -->
+
+<!-- -------------------------------- -->
+<!-- That is pipe we use for titlecase and uppercase -->
+<div>{{isDoubled}} {{name | titlecase}}</div>
+
+<div>{{isDoubled}} {{name | uppercase}}</div>
+
+<!-- -------------------------------- -->
+
+<!-- click the button and send thne data from child to parnet -->
+
+<button (click)="sendDataFromChildToParent()">sendDataCToP</button>
+
+
+<!-- Mobile No -->
+
+{{phoneNo | countryCode}}
